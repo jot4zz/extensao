@@ -1,0 +1,18 @@
+{
+  "name": "texto-certo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extensão de revisão local de português brasileiro",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:extension": "REAL_EXTENSION=1 node tests/browser.cjs",
+    "build": "node scripts/build.mjs && python3 scripts/package.py"
+  },
+  "devDependencies": {
+    "dictionary-pt": "4.0.0",
+    "esbuild": "0.28.2",
+    "hunspell-asm": "4.0.2",
+    "playwright": "1.64.1"
+  }
+}

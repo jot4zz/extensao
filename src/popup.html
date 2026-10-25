@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Texto Certo</title><link rel="stylesheet" href="ui.css"></head>
+<body class="popup"><header><div class="logo" aria-hidden="true">✓</div><div><h1>Texto Certo</h1><p class="subtitle">Suas palavras, com mais clareza.</p></div></header>
+<div class="card"><div class="row"><label for="enabled">Revisão ativada</label><input id="enabled" type="checkbox"></div><label class="field" for="mode">Como corrigir<select id="mode"><option value="suggest">Mostrar sugestões</option><option value="auto">Correção automática conservadora</option></select></label><p class="muted">No modo automático, apenas regras marcadas como seguras são aplicadas após terminar a palavra. As outras continuam como sugestões.</p></div>
+<div class="card"><div class="row"><label for="site">Ativar neste site<br><small id="hostname" class="site">Carregando…</small></label><input id="site" type="checkbox" disabled></div></div>
+<div id="status" class="status" role="status" aria-live="polite"></div><button id="options">Todas as configurações</button><footer>Português brasileiro · revisão local, sem envio de textos. Recarregue as abas abertas após instalar.</footer>
+<script src="engine.js"></script><script src="popup.js"></script></body></html>

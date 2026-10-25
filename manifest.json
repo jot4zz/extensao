@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Texto Certo — Português",
+  "version": "1.0.0",
+  "description": "Sugestões locais de ortografia, digitação e gramática em português, com modo automático opcional.",
+  "permissions": ["storage", "activeTab"],
+  "background": {"service_worker": "src/background.js"},
+  "content_security_policy": {"extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"},
+  "action": {"default_popup": "src/popup.html", "default_title": "Texto Certo"},
+  "options_page": "src/options.html",
+  "icons": {"16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png"},
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["src/engine.js", "src/content.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }]
+}
